@@ -10,7 +10,7 @@ $login_button = $google_client->createAuthUrl();
 $facebook_helper = $facebook->getRedirectLoginHelper();
 
 $facebook_permissions = ['email']; // Optional permissions
-$facebook_login_url = $facebook_helper->getLoginUrl('https://wg-test.herokuapp.com/UserFacebookController/Facebook_Login', $facebook_permissions);
+$facebook_login_url = $facebook_helper->getLoginUrl('https://workgress.online/UserFacebookController/Facebook_Login', $facebook_permissions);
 //$facebook_login_url = '<a href="'.$facebook_login_url.'"><img src="assets\img\btn_facebook.png" width="300" height="60"/></a>';
 
 ?>

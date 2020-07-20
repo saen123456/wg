@@ -29,9 +29,10 @@ class CourseController extends BaseController
         $title = $this->request->getVar("title");
 
         $file = $this->request->getFile('file');
-        $file_random = $file->getRandomName();
+
         //echo $file->getClientName();
         if ($file->getSize() > 0) {
+            $file_random = $file->getRandomName();
             $upload_to = 'public/upload/';
 
             /*$image = \Config\Services::image()

@@ -23,7 +23,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	//public $baseURL = 'https://wg-test.herokuapp.com';
+	//public $baseURL = 'https://workgress.online';
 	public $baseURL = 'http://localhost:8080/projectwg';
 	/*
 	|--------------------------------------------------------------------------

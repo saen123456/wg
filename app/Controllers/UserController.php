@@ -27,6 +27,15 @@ class UserController extends BaseController
         } else {
             echo view('home/HomePage');
         }
+
+        /*echo "test database<br>";
+        $model = new User_model(); //เรียก model User_model เพื่อใช่งานต่อ database
+        $User_Data = $model->test();
+        while ($User = $User_Data->fetchRow()) {
+            $Role_Id = $User['role_id'];
+            $Role_Name = $User['role_name'];
+            echo $Role_Id . " " . $Role_Name . "<br>";
+        }*/
     }
     //HomePage_Login
     public function homepage()
