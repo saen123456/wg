@@ -18,11 +18,12 @@ class CourseController extends BaseController
         if ($this->session->get("Role_name") == 'teacher' || $this->session->get("Role_name") == 'admin') {
             $model = new Course_model();
             $data['data'] = $model->Select_Video();
-            echo view('Course/CreateCourse', $data);
+            echo view('Course/TestVideo', $data);
         } else {
             echo view('home/HomePage');
         }
     }
+
     public function Upload_Video()
     {
         $model = new Course_model();

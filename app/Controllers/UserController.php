@@ -151,6 +151,15 @@ class UserController extends BaseController
             echo view('home/HomePage');
         }
     }
+    public function add_course()
+    {
+
+        if ($this->session->get("Role_name") == 'teacher') {
+            echo view('Course/course');
+        } else {
+            echo view('home/HomePage');
+        }
+    }
 
 
     /**********************************/

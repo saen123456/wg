@@ -18,15 +18,6 @@ class User_model extends Model
 
     public function __construct()
     {
-        /*$this->driver = 'postgres'; //ประเภทของระบบฐานข้อมูล
-        $this->connect_postgresdb = NewADOConnection($this->driver);
-        $this->server = 'ec2-52-86-73-86.compute-1.amazonaws.com'; //ชื่อ server
-        $this->user = 'epjiinsxvgasmv'; //ชื่อ user
-        $this->password = 'da800c8e1dfc3cb9e10a6d4095f8e080099ecd208a243b05ed736d1c8141d0ea'; //รหัสผ่านของ server
-        $this->database = 'ddaq8blnai659i'; //ชื่อ database
-        $this->connect_postgresdb->debug = false;
-        $this->connect_postgresdb->connect($this->server, $this->user, $this->password, $this->database);*/
-
         $this->driver = 'postgres'; //ประเภทของระบบฐานข้อมูล
         $this->connect_postgresdb = NewADOConnection($this->driver);
         $this->server = '34.87.38.159'; //ชื่อ server

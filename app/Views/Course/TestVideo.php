@@ -42,6 +42,9 @@
 
 		<link rel="preload" href="assets/css/footer.css " as="style" onload="this.rel='stylesheet'">
 
+		<!-- Css player video -->
+		<!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" /> -->
+		<link rel="stylesheet" href="assets/css/player.min.css" />
 	</head>
 
 	<?php
@@ -214,20 +217,30 @@
 					</form><br>
 					<?php
 					foreach ($data as $row) :
-					?>
-						<?php
 						echo $row['video_id'] . " " . $row['video_name'] . " " . $row['video_link'];
 						echo "<br>";
 						echo "<video width='400' controls><source src='./public/upload/" . $row['video_link'] . "' type='video/webm'></video>";
-						?><br>
+					?>
+						<br>
 
 
+
+
+						<script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+						<video poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" class="js-player">
+							<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" />
+							<?php echo "<source src='./public/upload/" . $row['video_link'] . "' type='video/webm'"; ?>
+						</video>
+						<script>
+							document.addEventListener('DOMContentLoaded', () => {
+								const player = Plyr.setup('.js-player');
+							});
+						</script>
 					<?php
 					endforeach;
 					?>
-
-
 				</div>
+
 			</div>
 
 			<!-- /.content -->

@@ -173,10 +173,10 @@
                 <?php
                 } else if ($this->session->get("Role_name") == 'admin') { ?>
                   <a class="dropdown-item" href="<?php echo base_url('/dashboard'); ?>">Dashboard</a>
-                  <a class="dropdown-item" href="<?php echo base_url('/createcourse'); ?>">เพิ่ม Course</a>
+                  <a class="dropdown-item" href="<?php echo base_url('/course'); ?>">เพิ่ม Course</a>
                 <?php
                 } else if ($this->session->get("Role_name") == 'teacher') { ?>
-                  <a class="dropdown-item" href="<?php echo base_url('/createcourse'); ?>">เพิ่ม Course</a>
+                  <a class="dropdown-item" href="<?php echo base_url('/course'); ?>">เพิ่ม Course</a>
                 <?php
                 }
                 ?>

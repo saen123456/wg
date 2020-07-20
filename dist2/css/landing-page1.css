@@ -26,7 +26,9 @@
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  
+  .upper{
+    margin-top: -15px;
+    }
   header.masthead .overlay {
     position: absolute;
     background-color: #5D66E8;

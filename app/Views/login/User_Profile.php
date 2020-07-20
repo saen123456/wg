@@ -151,41 +151,41 @@
 				<!-- SEARCH FORM -->
 				<!-- Right navbar links -->
 
-				<div class="navbar-collapse collapse w-200 order-3 dual-collapse" id="navbarSupportedContent">
-					<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-						<!-- Messages Dropdown Menu -->
-						<div class="input-group input-group-sm">
-							<!-- Notifications Dropdown Menu -->
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<?php
-								if ($this->session->get("Picture")) { ?>
-									<img src="<?php echo $this->session->get("Picture"); ?>" width="35" height="35" class="rounded-circle"><?php
-																																		} else { ?>
-									<img src="<?php echo base_url('assets/img/profile.jpg'); ?>" width="40" height="40" class="rounded-circle"><?php
-																																			}
-																																				?>
-							</a>
-							<div class="dropdown-menu mx-auto" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="<?php echo base_url('/profile'); ?>">Profile</a>
-								<?php
-								if ($this->session->get("Role_name") == 'student') {
-								?>
-									<a class="dropdown-item" href="<?php echo base_url('/teacher'); ?>">สอนบน Workgress</a>
-								<?php
-								} else if ($this->session->get("Role_name") == 'admin') { ?>
-									<a class="dropdown-item" href="<?php echo base_url('/dashboard'); ?>">Dashboard</a>
-									<a class="dropdown-item" href="<?php echo base_url('/createcourse'); ?>">เพิ่ม Course</a>
-								<?php
-								} else if ($this->session->get("Role_name") == 'teacher') { ?>
-									<a class="dropdown-item" href="<?php echo base_url('/createcourse'); ?>">เพิ่ม Course</a>
-								<?php
-								}
-								?>
-								<a class="dropdown-item" href="<?php echo base_url('/profile'); ?>">My Course</a>
-								<a class="dropdown-item" href="<?= site_url('/UserController/User_Logout') ?>">Log Out</a>
-							</div>
-						</div>
-					</ul>
+						<div class="navbar-collapse collapse w-200 order-3 dual-collapse upper" id="navbarSupportedContent">
+				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+					<!-- Messages Dropdown Menu -->
+					<div class="input-group input-group-sm">
+					<!-- Notifications Dropdown Menu -->
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<?php
+						if ($this->session->get("Picture")) { ?>
+						<img src="<?php echo $this->session->get("Picture"); ?>" width="35" height="35" class="rounded-circle"><?php
+																																} else { ?>
+						<img src="<?php echo base_url('assets/img/profile.jpg'); ?>" width="40" height="40" class="rounded-circle"><?php
+																																	}
+																																	?>
+					</a>
+					<div class="dropdown-menu mx-auto" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="<?php echo base_url('/profile'); ?>">Profile</a>
+						<?php
+						if ($this->session->get("Role_name") == 'student') {
+						?>
+						<a class="dropdown-item" href="<?php echo base_url('/teacher'); ?>">สอนบน Workgress</a>
+						<?php
+						} else if ($this->session->get("Role_name") == 'admin') { ?>
+						<a class="dropdown-item" href="<?php echo base_url('/dashboard'); ?>">Dashboard</a>
+						<a class="dropdown-item" href="<?php echo base_url('/course'); ?>">เพิ่ม Course</a>
+						<?php
+						} else if ($this->session->get("Role_name") == 'teacher') { ?>
+						<a class="dropdown-item" href="<?php echo base_url('/course'); ?>">เพิ่ม Course</a>
+						<?php
+						}
+						?>
+						<a class="dropdown-item" href="<?php echo base_url('/profile'); ?>">My Course</a>
+						<a class="dropdown-item" href="<?= site_url('/UserController/User_Logout') ?>">Log Out</a>
+					</div>
+					</div>
+				</ul>
 				</div>
 
 			</div>
@@ -301,7 +301,7 @@
 																	?>
 														<div class="form-group row">
 															<div class="offset-sm-2 col-sm-10">
-																<button type="submit" class="btn btn-primary">ยืนยัน</button>
+																<button type="submit" class="btn btn-danger">ยืนยัน</button>
 
 															</div>
 														</div>
@@ -364,11 +364,9 @@
 																<div class="changepass">
 																	<div class="input-group mb-3">
 																		<input type="text" class="form-control" name="pass" id="pass" value="*******" placeholder="ชื่อ-นามสกุล" readonly>
-																		<div class="input-group-append">
-																			<div class="input-group-text" herf="#" class="fas fa-pen" data-toggle="modal" data-target="#modal-default">
-																				<span herf="#" class="fas fa-pen" data-toggle="modal" data-target="#modal-default"></span>
-																			</div>
-																		</div>
+																		<span class="input-group-append">
+																		<button  type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modal-default" ><span class="fas fa-pen"></span></button>
+																	</span>
 																	</div>
 																</div>
 															</div>
