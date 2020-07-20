@@ -11,9 +11,9 @@
         <title>Workgress</title>
 
         <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="<?php echo base_url('plugins/fontawesome-free/css/all.min.css'); ?>">
         <!-- Theme style -->
-        <link rel="stylesheet" href="dist2/css/adminlte.min.css">
+        <link rel="stylesheet" href="<?php echo base_url('dist2/css/adminlte.min.css'); ?>">
         <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url('dist2/css/photo.css'); ?>" type="text/css" media="screen">
@@ -32,15 +32,15 @@
         <script src="plugins/toastr/toastr.min.js"></script>
 
         <!-- Animate.css -->
-        <link rel="stylesheet" href="assets/course/css/animate.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/course/css/animate.css'); ?>">
 
         <!-- Theme style  -->
-        <link rel="stylesheet" href="assets/course/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/course/css/style.css'); ?>">
 
         <!-- Modernizr JS -->
         <script src="assets/course/js/modernizr-2.6.2.min.js"></script>
 
-        <link rel="preload" href="assets/css/footer.css " as="style" onload="this.rel='stylesheet'">
+        <link rel="preload" href="<?php echo base_url('assets/css/footer.css'); ?> " as="style" onload="this.rel='stylesheet'">
 
     </head>
 
