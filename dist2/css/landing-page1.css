@@ -139,6 +139,15 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-  
+  .cards {
+    box-shadow: 0 4px 8px 0 rgba(71, 71, 71, 0.4);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+  }
+  .cards:hover{
+    box-shadow: 0 10px 16px 0 rgba(31, 31, 31, 0.8);
+  }
   
   
