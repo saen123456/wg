@@ -15,7 +15,7 @@ class CourseController extends BaseController
     public function add_course()
     {
 
-        if ($this->session->get("Role_name") == 'teacher') {
+        if ($this->session->get("Role_name") == 'teacher' || $this->session->get("Role_name") == 'admin') {
             echo view('Course/course');
         } else {
             echo view('home/HomePage');
