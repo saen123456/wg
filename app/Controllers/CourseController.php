@@ -12,6 +12,15 @@ class CourseController extends BaseController
         $this->session = \Config\Services::session();
         $this->session->start();
     }
+    public function add_course()
+    {
+
+        if ($this->session->get("Role_name") == 'teacher') {
+            echo view('Course/course');
+        } else {
+            echo view('home/HomePage');
+        }
+    }
     /**** ส่วนของ View ****/
     public function CreateCourse()
     {
